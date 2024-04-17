@@ -1,0 +1,184 @@
+body{
+    background-color: black;
+}
+h1{
+    top: 7.5px;
+    text-indent: 75px;
+    font-size: 48px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+p{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+h2{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+ul{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    position: absolute;
+    left: 25px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#background h1{
+    z-index: 4;
+    position: absolute;
+}
+.blur-overlay {
+    position: fixed;
+    width: 100%;
+    height: 10vh; /* Adjust height for the blurred area */
+    backdrop-filter: blur(1.5px); /* Adjust blur radius as needed */
+    z-index: 2;
+}
+
+.blur-top {
+    top: 0;
+}
+
+.blur-bottom {
+    height: 10%;
+    bottom: 0;
+    position: fixed;
+}
+.logo{
+    position: absolute;
+    width: 50px;
+    z-index: 6;
+    left: 1%;
+    top: 1%;
+    filter: invert(100%);
+}
+#Original_Banjo_Construction{
+    position: absolute;
+    top: 100px;
+}
+#Original_Banjo_Construction h2{
+    text-indent: 30px;
+}
+#obc1{
+    height: 170px;
+    width: 200px;
+    position: absolute;
+    top: 55px;
+    left: 50px;
+}
+#obc2{
+    height: 100px;
+    width: 200px;
+    position: absolute;
+    top: 55px;
+    left: 350px;
+}
+#obc3{
+    height: 100px;
+    width: 200px;
+    position: absolute;
+    top: 60px;
+    left: 650px;
+}
+#strum-strump-picture{
+    height: 400px;
+    aspect-ratio: 533/800;
+    position: absolute;
+    top: 80px;
+    right: 300px;
+}
+#Changes h2{
+    position: absolute;
+    top: 400px;
+    width: 50%;
+    left: 30px;
+}
+#c1{
+    position: absolute;
+    top: 450px;
+    width: 400px;
+    left: 50px;
+}
+#c2{
+    position: absolute;
+    top: 550px;
+    width: 400px;
+    left: 50px;
+}
+#Different_names h2{
+    position: absolute;
+    top: 575px;
+    width: 300px;
+    left: 575px;
+    text-align: center;
+}
+#d1{
+    position: absolute;
+    top: 750px;
+    width: 300px;
+    left: 600px;
+}
+#d2{
+    position: absolute;
+    top: 750px;
+    width: 300px;
+    left: 800px;
+}
+#Strum-strumps h2{
+    position: absolute;
+    text-align: center;
+    top: 500px;
+    width: 40%;
+    right: 5%;
+}
+#ss1{
+    position: absolute;
+    text-align: left;
+    top: 600px;
+    width: 40%;
+    right: 5%;
+}
+#ss2{
+    position: absolute;
+    text-align: left;
+    top: 700px;
+    width: 40%;
+    right: 5%;
+}
+#transition_to_minstrelsy{
+    position: absolute;
+    top: 900px;
+    padding-bottom: 100px;
+    width: 80%;
+    left: 2%;
+}
+#transition_to_minstrelsy p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#bibliography-link {
+    position: fixed;
+    bottom: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    z-index: 9999; /* Ensure it's above other content */
+    font-size: 16px; /* Adjust as needed */
+  }
+  
+  #bibliography-link a {
+    text-decoration: none; /* Remove underline */
+    color: gray; /* Default color */
+  }
+  
+  #bibliography-link a:visited {
+    color: beige; /* Color for visited links */
+  }
+  
+  /* Optional styling for hover effect */
+  #bibliography-link a:hover {
+    text-decoration: underline;
+    color: white; /* Change color on hover if desired */
+  }

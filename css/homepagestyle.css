@@ -1,0 +1,1583 @@
+body {
+    overflow: hidden;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}
+#background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    background:  url(../images/bg2.jpg);
+    background-position-x: center;
+    background-size: cover;
+    animation: animateBg 50s linear infinite;
+  }
+@keyframes animateBg{
+  0%, 100%{
+transform: scale(1);
+  }
+  50%{
+      transform: scale(1.2);
+  }
+}
+#background span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1), 
+  0 0 0 8px rgba(255, 255, 255, 0.1),
+  0 0 20px rgba(255, 255, 255, 1);
+  animation: animate 3s linear infinite;
+}
+#background span::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 300px;
+  height: 1px;
+  background: linear-gradient(90deg, #fff, transparent);
+}
+@keyframes animate{
+  0%{
+      transform: rotate(315deg) translateX(0);
+      opacity: 1;
+  }
+  70%{
+      opacity: 1;
+  }
+  100%{
+      transform: rotate(315deg) translateX(-1000px);
+      opacity: 0;
+  }
+}
+#background span:nth-child(1){
+  top: 0;
+  right: 0;
+  left: initial;
+  animation-delay: 0;
+  animation-duration: 1s;
+}
+#background  span:nth-child(2){
+  top: 0;
+  right: 80px;
+  left: initial;
+  animation-delay: -0.2s;
+  animation-duration: 3s;
+}
+#background span:nth-child(3){
+  top: 80px;
+  right: 0px;
+  left: initial;
+  animation-delay: 0.4s;
+  animation-duration: 2s;
+}
+#background span:nth-child(4){
+  top: 0;
+  right: 180px;
+  left: initial;
+  animation-delay: 0.6s;
+  animation-duration: 1.5s;
+}
+#background  span:nth-child(5){
+  top: 0;
+  right: 400px;
+  left: initial;
+  animation-delay: 0.8s;
+  animation-duration: 2.5s;
+}
+#background span:nth-child(6){
+  top: 0;
+  right: 600px;
+  left: initial;
+  animation-delay: 1s;
+  animation-duration: 3s;
+}
+#background  span:nth-child(7){
+  top: 300px;
+  right: 0px;
+  left: initial;
+  animation-delay: 1.2s;
+  animation-duration: 1.75s;
+}
+#background span:nth-child(8){
+  top: 0px;
+  right: 700px;
+  left: initial;
+  animation-delay: 1.4s;
+  animation-duration: 1.25s;
+}
+#background span:nth-child(9){
+  top: 0px;
+  right: 1000px;
+  left: initial;
+  animation-delay: 0.75s;
+  animation-duration: 2.25s;
+}
+#background span:nth-child(10){
+  top: 0px;
+  right: 4500px;
+  left: initial;
+  animation-delay: 2.75s;
+  animation-duration: 1.75s;
+}
+
+#B {
+  color: white;
+  font-size: 128px;
+  position: relative;
+  text-decoration: none;
+  z-index: 2;
+}
+.container {
+  left: 12.5%;
+  top: 0.1%;
+  position: relative;
+  display: inline-block;
+}
+
+.underline {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: -100%;
+  width: 0;
+  height: 2px; /* Adjust this value to change the thickness of the underline */
+  background-color: #2e59a0; /* Adjust this value to change the color of the underline */
+  transition: width 1s ease; /* Adjust the duration and easing function as needed */
+}
+
+.container:hover .underline {
+  width: 300%; /* Change the width to 100% on hover */
+}
+
+.underline_vert {
+  position: absolute;
+  z-index: 2;
+  rotate: 90deg;
+  top: 50%;
+  left: -100%;
+  width: 0;
+  height: 2px; /* Adjust this value to change the thickness of the underline */
+  background-color: #6298e2; /* Adjust this value to change the color of the underline */
+  transition: width 1s 0.5s ease; /* Adjust the duration and easing function as needed */
+}
+
+.container:hover .underline_vert {
+  width: 300%; /* Change the width to 100% on hover */
+}
+
+.circle-border {
+  position: absolute;
+  top: 50%;
+  left: 51.15%;
+  transform: translate(-50%, -50%);
+  width: 150px; /* Adjust the width and height to change the size of the circle */
+  height: 150px;
+  z-index: 1;
+  border-radius: 50%; /* Make it circular */
+  border: 2px solid #94bbe1; /* Adjust this value to change the color and thickness of the border */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 1s ease; /* Adjust the duration and easing function as needed */
+}
+
+#B:hover ~ .circle-border {
+  opacity: 1; /* Make it visible on hover */
+}
+
+
+ .A{
+  color: white;
+  font-size: 128px;
+  position: relative;
+  left: 14%;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+ }
+ .N{
+  color: white;
+  font-size: 128px;
+  position: relative;
+  left: 16%;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+ }
+
+.J{
+  color: white;
+  font-size: 128px;
+  position: relative;
+  left: 18%;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+ }
+.O{
+ color: white;
+ font-size: 128px;
+ position: relative;
+ left: 20%;
+ justify-content: center;
+ align-items: center;
+ text-decoration: none;
+}
+.O > div{
+  position: absolute;
+  font-size: 96px;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.O #S {
+  top: 15%;
+  left: 20%;
+  animation-name: moveS-O_reverse;
+  animation-delay: 1.1s;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+#O:hover #S{
+  animation-name: moveS-O;
+  animation-delay: 0.2s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+.O #T {
+  left: 17.5%;
+  top: 16.5%;
+  animation-name: moveT-O_reverse;
+  animation-delay: 0.5s;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+#O:hover #T{
+  animation-name: moveT-O;
+  animation-delay: 0.8s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+.O #R {
+  left: 20%;
+  top: 12%;
+  animation-name: moveR-O_reverse;
+  animation-delay: 0.2s;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+#O:hover #R{
+  animation-name: moveR-O;
+  animation-delay: 1.1s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+.O #Y{
+  top: 15%;
+  left: 15%;
+  animation-name: moveY-O_reverse;
+  animation-delay: 0.8s;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+#O:hover #Y{
+  animation-name: moveY-O;
+  animation-delay: 0.5s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+@keyframes moveS-O {
+  from {
+    transform: translateY(0%);
+    opacity: 0
+  }
+  to {
+    transform: translateY(-160%);
+    opacity: 1;
+  }
+}
+@keyframes moveS-O_reverse{
+  from{
+    transform: translateY(-160%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+@keyframes moveT-O {
+  from {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(-90%);
+    opacity: 1;
+  }
+}
+@keyframes moveT-O_reverse{
+  from{
+    transform: translateY(-90%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+@keyframes moveR-O {
+  from {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(80%);
+    opacity: 1;
+  }
+}
+@keyframes moveR-O_reverse{
+  from{
+    transform: translateY(80%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+@keyframes moveY-O {
+  from {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(150%);
+    opacity: 1;
+  }
+}
+@keyframes moveY-O_reverse{
+  from{
+    transform: translateY(150%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+
+.J > div{
+  position: absolute;
+  font-size: 60px;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.J #U {
+  top: 30%;
+  left: 10%;
+  
+  animation-name: moveU-J_reverse;
+  animation-delay: 1s;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+
+#J:hover #U{
+  animation-name: moveU-J;
+  animation-delay: 0.2s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+
+.J #S {
+  top: 30%;
+  left: 20%;
+  animation-name: moveS-J_reverse;
+  animation-delay: 0.8s;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+#J:hover #S{
+  animation-name: moveS-J;
+  animation-delay: 0.4s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+
+.J #T {
+  top: 30%;
+  left: 15%;
+  animation-name: moveT-J_reverse;
+  animation-delay: 0.6s;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+
+#J:hover #T{
+  animation-name: moveT-J;
+  animation-delay: 0.6s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+.J #cash {
+  top: 30%;
+  left: 23%;
+  animation-name: movecash-J_reverse;
+  animation-delay: 0.2s;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+#J:hover #cash{
+  animation-name: movecash-J;
+  animation-delay: 1s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+
+@keyframes moveU-J {
+  from {
+    transform: translateY(0%);
+    opacity: 0
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 1;
+  }
+}
+@keyframes moveU-J_reverse{
+  from{
+    transform: translateY(100%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+@keyframes moveS-J {
+  from {
+    transform: translateY(0%);
+    opacity: 0
+  }
+  to {
+    transform: translateY(175%);
+    opacity: 1;
+  }
+}
+@keyframes moveS-J_reverse{
+  from{
+    transform: translateY(175%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+@keyframes moveT-J {
+  from {
+    transform: translateY(0%);
+    opacity: 0
+  }
+  to {
+    transform: translateY(250%);
+    opacity: 1;
+  }
+}
+@keyframes moveT-J_reverse{
+  from{
+    transform: translateY(250%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+@keyframes movecash-J {
+  from {
+    transform: translateY(0%);
+    opacity: 0
+  }
+  to {
+    transform: translateY(350%);
+    opacity: 1;
+  }
+}
+@keyframes movecash-J_reverse{
+  from{
+    transform: translateY(350%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+
+.N > div{
+  position: absolute;
+  font-size: 60px;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.N #M {
+  top: 30%;
+  left: 23%;
+  animation-name: moveM-N_reverse;
+  animation-delay: 0.3s;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+#N:hover #M{
+  animation-name: moveM-N;
+  animation-delay: 0.9s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+
+.N #I {
+  top: 30%;
+  left: 40%;
+  animation-name: moveI-N_reverse;
+  animation-delay: 0.75s;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+#N:hover #I{
+  animation-name: moveI-N;
+  animation-delay: 0.45s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+
+.N #S1 {
+  top: 30%;
+  left: 32%;
+  animation-name: moveS1-N_reverse;
+  animation-delay: 1.05s;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+#N:hover #S1{
+  animation-name: moveS1-N;
+  animation-delay: 0.15s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+
+.N #T {
+  top: 30%;
+  left: 30%;
+  animation-name: moveT-N_reverse;
+  animation-delay: 0.9s;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+#N:hover #T{
+  animation-name: moveT-N;
+  animation-delay: 0.3s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+
+.N #R {
+  top: 30%;
+  left: 32%;
+  animation-name: moveR-N_reverse;
+  animation-delay: 0.6s;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+#N:hover #R{
+  animation-name: moveR-N;
+  animation-delay: 0.6s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+
+.N #E {
+  top: 30%;
+  left: 32%;
+  animation-name: moveE-N_reverse;
+  animation-delay: 0.45s;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+#N:hover #E{
+  animation-name: moveE-N;
+  animation-delay: 0.75s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+
+.N #L {
+  top: 30%;
+  left: 32%;
+  animation-name: moveL-N_reverse;
+  animation-delay: 0.15s;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+#N:hover #L{
+  animation-name: moveL-N;
+  animation-delay: 1.05s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+
+@keyframes moveM-N {
+  from {
+    transform: translateY(0%);
+    opacity: 0
+  }
+  to {
+    transform: translateY(-210%);
+    opacity: 1;
+  }
+}
+@keyframes moveM-N_reverse{
+  from{
+    transform: translateY(-210%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+@keyframes moveI-N {
+  from {
+    transform: translateY(0%);
+    opacity: 0
+  }
+  to {
+    transform: translateY(-125%);
+    opacity: 1;
+  }
+}
+@keyframes moveI-N_reverse{
+  from{
+    transform: translateY(-125%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+@keyframes moveS1-N {
+  from {
+    transform: translateY(0%);
+    opacity: 0
+  }
+  to {
+    transform: translateY(115%);
+    opacity: 1;
+  }
+}
+@keyframes moveS1-N_reverse{
+  from{
+    transform: translateY(115%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+@keyframes moveT-N {
+  from {
+    transform: translateY(0%);
+    opacity: 0
+  }
+  to {
+    transform: translateY(200%);
+    opacity: 1;
+  }
+}
+@keyframes moveT-N_reverse{
+  from{
+    transform: translateY(200%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+@keyframes moveR-N {
+  from {
+    transform: translateY(0%);
+    opacity: 0
+  }
+  to {
+    transform: translateY(280%);
+    opacity: 1;
+  }
+}
+@keyframes moveR-N_reverse{
+  from{
+    transform: translateY(280%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+@keyframes moveE-N {
+  from {
+    transform: translateY(0%);
+    opacity: 0
+  }
+  to {
+    transform: translateY(360%);
+    opacity: 1;
+  }
+}
+@keyframes moveE-N_reverse{
+  from{
+    transform: translateY(360%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+@keyframes moveL-N {
+  from {
+    transform: translateY(0%);
+    opacity: 0
+  }
+  to {
+    transform: translateY(440%);
+    opacity: 1;
+  }
+}
+@keyframes moveL-N_reverse{
+  from{
+    transform: translateY(440%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+.A > div{
+  position: absolute;
+  font-size: 48px;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.A #C {
+  top: 30%;
+  left: 30%;
+  animation-name: moveC-A_reverse;
+  animation-delay: 2s;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+#A:hover #C{
+  animation-name: moveC-A;
+  animation-delay: 0.1s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+
+.A #U1 {
+  top: 30%;
+  left: 30%;
+  animation-name: moveU1-A_reverse;
+  animation-delay: 1.9s;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+#A:hover #U1{
+  animation-name: moveU1-A;
+  animation-delay: 0.2s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+
+.A #L1 {
+  top: 30%;
+  left: 34.6%;
+  animation-name: moveL1-A_reverse;
+  animation-delay: 1.8s;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+#A:hover #L1{
+  animation-name: moveL1-A;
+  animation-delay: 0.3s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+
+.A #T1 {
+  top: 30%;
+  left: 33%;  
+  animation-name: moveT1-A_reverse;
+  animation-delay: 1.7s;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+#A:hover #T1{
+  animation-name: moveT1-A;
+  animation-delay: 0.4s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+
+.A #U2 {
+  top: 30%;
+  left: 30%;
+  animation-name: moveU2-A_reverse;
+  animation-delay: 1.6s;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+#A:hover #U2{
+  animation-name: moveU2-A;
+  animation-delay: 0.5s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+
+.A #R1 {
+  top: 30%;
+  left: 32%;
+  animation-name: moveR1-A_reverse;
+  animation-delay: 1.5s;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+#A:hover #R1{
+  animation-name: moveR1-A;
+  animation-delay: 0.6s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+
+.A #L2 {
+  top: 30%;
+  left: 34.6%; 
+  animation-name: moveL2-A_reverse;
+  animation-delay: 1.4s;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+#A:hover #L2{
+  animation-name: moveL2-A;
+  animation-delay: 0.7s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+
+.A #A1 {
+  /* top: 125%; */
+  /* left: -148%; opacity: 1; */
+  animation-name: moveA1-A_reverse;
+  animation-delay: 1.3s;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+#A:hover #A1{
+  animation-name: moveA1-A;
+  animation-delay: 0.8s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+
+.A #P1 {
+  /* top: 125%; */
+  animation-name: moveP1-A_reverse;
+  animation-delay: 1.2s;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+#A:hover #P1{
+  animation-name: moveP1-A;
+  animation-delay: 0.9s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+
+.A #P2 {
+  /* top: 125%; */
+  animation-name: moveP2-A_reverse;
+  animation-delay: 1.1s;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+#A:hover #P2{
+  animation-name: moveP2-A;
+  animation-delay: 1s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+
+.A #R2 {
+  /* top: 125%; */
+  animation-name: moveR2-A_reverse;
+  animation-delay: 1s;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+#A:hover #R2{
+  animation-name: moveR2-A;
+  animation-delay: 1.1s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+
+.A #O1 {
+  /* top: 125%; */
+  animation-name: moveO1-A_reverse;
+  animation-delay: 0.9s;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+#A:hover #O1{
+  animation-name: moveO1-A;
+  animation-delay: 1.2s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+
+.A #P3 {
+  /* top: 125%; */
+  animation-name: moveP3-A_reverse;
+  animation-delay: 0.8s;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+#A:hover #P3{
+  animation-name: moveP3-A;
+  animation-delay: 1.3s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+
+.A #R3 {
+  /* top: 125%; */
+  animation-name: moveR3-A_reverse;
+  animation-delay: 0.7s;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+#A:hover #R3{
+  animation-name: moveR3-A;
+  animation-delay: 1.4s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+
+.A #I1 {
+  /* top: 125%; */
+  animation-name: moveI1-A_reverse;
+  animation-delay: 0.6s;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+#A:hover #I1{
+  animation-name: moveI1-A;
+  animation-delay: 1.5s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+
+.A #A2 {
+  /* top: 125%; */
+  animation-name: moveA2-A_reverse;
+  animation-delay: 0.5s;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+#A:hover #A2{
+  animation-name: moveA2-A;
+  animation-delay: 1.6s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+
+.A #T2 {
+  /* top: 125%; */
+  animation-name: moveT2-A_reverse;
+  animation-delay: 0.4s;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+#A:hover #T2{
+  animation-name: moveT2-A;
+  animation-delay: 1.7s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+
+.A #I2 {
+  /* top: 125%; */
+  animation-name: moveI2-A_reverse;
+  animation-delay: 0.3s;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+#A:hover #I2{
+  animation-name: moveI2-A;
+  animation-delay: 1.8s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+
+.A #O2 {
+  /* top: 125%; */
+  animation-name: moveO2-A_reverse;
+  animation-delay: 0.2s;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this
+
+ element */
+}
+#A:hover #O2{
+  animation-name: moveO2-A;
+  animation-delay: 1.9s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+
+.A #N {
+  /* top: 125%; */
+  animation-name: moveN-A_reverse;
+  animation-delay: 0.1s;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+#A:hover #N{
+  animation-name: moveN-A;
+  animation-delay: 2s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out; /* Apply the moveDown animation to this element */
+}
+@keyframes moveR1-A {
+  from {
+    transform: translateY(0%);
+    opacity: 0
+  }
+  to {
+    transform: translateY(-125%);
+    opacity: 1;
+  }
+}
+@keyframes moveR1-A_reverse{
+  from{
+    transform: translateY(-125%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+@keyframes moveU2-A {
+  from {
+    transform: translateY(0%);
+    opacity: 0
+  }
+  to {
+    transform: translateY(-200%);
+    opacity: 1;
+  }
+}
+@keyframes moveU2-A_reverse{
+  from{
+    transform: translateY(-200%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+@keyframes moveT1-A {
+  from {
+    transform: translateY(0%);
+    opacity: 0
+  }
+  to {
+    transform: translateY(-275%);
+    opacity: 1;
+  }
+}
+@keyframes moveT1-A_reverse{
+  from{
+    transform: translateY(-275%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+@keyframes moveL1-A {
+  from {
+    transform: translateY(0%);
+    opacity: 0
+  }
+  to {
+    transform: translateY(-350%);
+    opacity: 1;
+  }
+}
+@keyframes moveL1-A_reverse{
+  from{
+    transform: translateY(-350%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+@keyframes moveU1-A {
+  from {
+    transform: translateY(0%);
+    opacity: 0
+  }
+  to {
+    transform: translateY(-425%);
+    opacity: 1;
+  }
+}
+@keyframes moveU1-A_reverse{
+  from{
+    transform: translateY(-425%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+@keyframes moveC-A {
+  from {
+    transform: translateY(0%);
+    opacity: 0
+  }
+  to {
+    transform: translateY(-500%);
+    opacity: 1;
+  }
+}
+@keyframes moveC-A_reverse{
+  from{
+    transform: translateY(-500%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+@keyframes moveL2-A {
+  from {
+    transform: translateY(0%);
+    opacity: 0
+  }
+  to {
+    transform: translateY(135%);
+    opacity: 1;
+  }
+}
+@keyframes moveL2-A_reverse{
+  from{
+    transform: translateY(135%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+@keyframes moveA1-A {
+  from {
+    transform: translate(0%, 0%);
+    opacity: 0
+  }
+  to {
+    transform: translate(-380%, 350%);
+    opacity: 1;
+  }
+}
+@keyframes moveA1-A_reverse{
+  from{
+    transform: translate(-380%, 350%);
+    opacity: 1;
+  }
+  to {
+    transform: translate(0%, 0%);
+    opacity: 0;
+  }
+}
+@keyframes moveO1-A {
+  from {
+    transform: translate(0%, 0%);
+    opacity: 0
+  }
+  to {
+    transform: translate(0%, 350%);
+    opacity: 1;
+  }
+}
+@keyframes moveO1-A_reverse{
+  from{
+    transform: translate(0%, 350%);
+    opacity: 1;
+  }
+  to {
+    transform: translate(0%, 0%);
+    opacity: 0;
+  }
+}
+
+@keyframes moveR2-A {
+  from {
+    transform: translate(0%, 0%);
+    opacity: 0
+  }
+  to {
+    transform: translate(-105%, 350%);
+    opacity: 1;
+  }
+}
+@keyframes moveR2-A_reverse{
+  from{
+    transform: translate(-105%, 350%);
+    opacity: 1;
+  }
+  to {
+    transform: translate(0%, 0%);
+    opacity: 0;
+  }
+}
+
+@keyframes moveP2-A {
+  from {
+    transform: translate(0%, 0%);
+    opacity: 0
+  }
+  to {
+    transform: translate(-235%, 350%);
+    opacity: 1;
+  }
+}
+@keyframes moveP2-A_reverse{
+  from{
+    transform: translate(-235%, 350%);
+    opacity: 1;
+  }
+  to {
+    transform: translate(0%, 0%);
+    opacity: 0;
+  }
+}
+
+@keyframes moveP1-A {
+  from {
+    transform: translate(0%, 0%);
+    opacity: 0
+  }
+  to {
+    transform: translate(-350%, 350%);
+    opacity: 1;
+  }
+}
+@keyframes moveP1-A_reverse{
+  from{
+    transform: translate(-350%, 350%);
+    opacity: 1;
+  }
+  to {
+    transform: translate(0%, 0%);
+    opacity: 0;
+  }
+}
+
+@keyframes moveP3-A {
+  from {
+    transform: translate(0%, 0%);
+    opacity: 0
+  }
+  to {
+    transform: translate(135%, 350%);
+    opacity: 1;
+  }
+}
+@keyframes moveP3-A_reverse{
+  from{
+    transform: translate(135%, 350%);
+    opacity: 1;
+  }
+  to {
+    transform: translate(0%, 0%);
+    opacity: 0;
+  }
+}
+
+@keyframes moveR3-A {
+  from {
+    transform: translate(0%, 0%);
+    opacity: 0
+  }
+  to {
+    transform: translate(200%, 350%);
+    opacity: 1;
+  }
+}
+@keyframes moveR3-A_reverse{
+  from{
+    transform: translate(200%, 350%);
+    opacity: 1;
+  }
+  to {
+    transform: translate(0%, 0%);
+    opacity: 0;
+  }
+}
+
+@keyframes moveI1-A {
+  from {
+    transform: translate(0%, 0%);
+    opacity: 0
+  }
+  to {
+    transform: translate(625%, 350%);
+    opacity: 1;
+  }
+}
+@keyframes moveI1-A_reverse{
+  from{
+    transform: translate(625%, 350%);
+    opacity: 1;
+  }
+  to {
+    transform: translate(0%, 0%);
+    opacity: 0;
+  }
+}
+
+@keyframes moveA2-A {
+  from {
+    transform: translate(0%, 0%);
+    opacity: 0
+  }
+  to {
+    transform: translate(340%, 350%);
+    opacity: 1;
+  }
+}
+@keyframes moveA2-A_reverse{
+  from{
+    transform: translate(340%, 350%);
+    opacity: 1;
+  }
+  to {
+    transform: translate(0%, 0%);
+    opacity: 0;
+  }
+}
+
+@keyframes moveT2-A {
+  from {
+    transform: translate(0%, 0%);
+    opacity: 0
+  }
+  to {
+    transform: translate(510%, 350%);
+    opacity: 1;
+  }
+}
+@keyframes moveT2-A_reverse{
+  from{
+    transform: translate(510%, 350%);
+    opacity: 1;
+  }
+  to {
+    transform: translate(0%, 0%);
+    opacity: 0;
+  }
+}
+
+@keyframes moveI2-A {
+  from {
+    transform: translate(0%, 0%);
+    opacity: 0
+  }
+  to {
+    transform: translate(1150%, 350%);
+    opacity: 1;
+  }
+}
+@keyframes moveI2-A_reverse{
+  from{
+    transform: translate(1150%, 350%);
+    opacity: 1;
+  }
+  to {
+    transform: translate(0%, 0%);
+    opacity: 0;
+  }
+}
+
+@keyframes moveO2-A {
+  from {
+    transform: translate(0%, 0%);
+    opacity: 0
+  }
+  to {
+    transform: translate(580%, 350%);
+    opacity: 1;
+  }
+}
+@keyframes moveO2-A_reverse{
+  from{
+    transform: translate(580%, 350%);
+    opacity: 1;
+  }
+  to {
+    transform: translate(0%, 0%);
+    opacity: 0;
+  }
+}
+
+@keyframes moveN-A {
+  from {
+    transform: translate(0%, 0%);
+    opacity: 0
+  }
+  to {
+    transform: translate(675%, 350%);
+    opacity: 1;
+  }
+}
+@keyframes moveN-A_reverse{
+  from{
+    transform: translate(675%, 350%);
+    opacity: 1;
+  }
+  to {
+    transform: translate(0%, 0%);
+    opacity: 0;
+  }
+}

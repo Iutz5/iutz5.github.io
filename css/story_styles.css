@@ -1,0 +1,706 @@
+body {
+    background-color: black;
+    margin: 0;
+    overflow-y: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+h1{
+    color: white;
+    font-size: 36px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    margin: 2%;
+    position: relative;
+    z-index: 2; /* Ensure heading is above the blurred overlay */
+    text-align: left; /* Center the heading */
+    left: 5%;
+}
+#background {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Adjust height as needed */
+    overflow: hidden;
+    background: url(../images/blank_map.jpg) center/cover no-repeat; /* Updated background shorthand */
+}
+
+.blur-overlay {
+    position: absolute;
+    width: 100%;
+    height: 10%; /* Adjust height for the blurred area */
+    backdrop-filter: blur(2px); /* Adjust blur radius as needed */
+    z-index: 2;
+}
+
+.blur-top {
+    top: 0;
+}
+
+.blur-bottom {
+    height: 5%;
+    bottom: 0;
+}
+
+.logo{
+    position: absolute;
+    z-index: 2;
+    width: 4%;
+    height:8%;
+    left: 2%;
+    top: 2%;
+    filter: invert(100%);
+}
+.slider{
+    position: absolute;
+
+    width: 70%;
+    bottom: 10%;
+    left: 30%;
+}
+#slider{
+    -webkit-appearance: none;
+    position: relative;
+    height: 7px;
+    width: 50%;
+    outline: none;
+    border-radius: 3px;    
+    z-index: 3;
+}
+#selector{
+    -webkit-appearance: none;
+    height: 104px;
+    width: 48px;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.SelectBtn{
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+}
+#SelectValue{
+    width: 48px;
+    height:48px;
+    position: absolute;
+    top: 0;
+    background: #2b81d0;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 45px;
+    font-size: 20px;
+    font-weight: bold;
+}
+#SelectValue::after{
+    content: '';
+    border-top: 17px solid #2b81d0;
+    border-left: 24px solid #000;
+    border-right: 24px solid #000;
+    position: absolute;
+    bottom: -14px;
+    left: 0;    
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid #000000;
+    height: 36px;
+    width: 16px;
+    border-radius: 3px;
+    background: #ffffff;
+    cursor: pointer;
+    z-index: 4;
+    margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+   }
+input[type="range"]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    background: transparent !important; /* Set track background to transparent */
+    border: none !important; /* Remove track border */    
+}
+
+input[type=range] {
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */ /* Specific width is required for Firefox. */
+    background: transparent; /* Otherwise white in Chrome */
+}
+
+#banjo_slider{
+    position: absolute;
+    top: 41%;
+    left: 30%;
+    filter: invert(50%);
+    aspect-ratio: 1249 / 1723;
+    height: 100%;
+    transform: rotate(120deg);
+    z-index: 2;
+    overflow-y: hidden;
+}
+.box {
+    position: absolute;
+    top: 87.5%;
+    left: 15%;
+}
+.box span {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-bottom: 1px solid #fff; /* Changed from border-top */
+    border-right: 1px solid #fff; /* Changed from border-left */
+    transform: rotate(-45deg); /* Adjusted rotation to point right */
+    margin: -10px;
+    animation: animate 2s infinite;
+}
+.box span:nth-child(3) {
+    animation-delay: 0s;
+    position: absolute;
+    left: -20px;
+}
+.box span:nth-child(2) {
+    animation-delay: -0.2s;
+    position: absolute;
+    left: -10px;
+}
+.box span:nth-child(1) {
+    animation-delay: -0.4s;
+    position: absolute; /* Adjusted initial position for first span */ /* Position the span relative to its parent */
+    left: 0px;
+}
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform: rotate(-45deg) translate(-35px, -35px); /* Adjusted initial position */
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(-45deg) translate(35px, 35px); /* Adjusted final position */
+    }
+}
+#Instructions{
+    top: 75%;
+    left: 5%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    color: white;
+    position: absolute;
+    width: 300px;
+    text-align: center;
+}
+#Jamaica1687{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #3aba4d;
+    position: absolute;
+    top: 49.8%;
+    left: 28.2%;
+    animation: pulse 3s linear infinite;
+    opacity: 0;
+    transition: opacity 1s;
+    z-index: 3;
+}
+#Jamaica1687-box{
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    background: black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    top: 45%;
+    left: 5%;
+    opacity: 0;
+    transition: opacity 1s;
+}
+#Jamaica1750{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #3aba4d;
+    position: absolute;
+    top: 49.8%;
+    left: 28.2%;
+    animation: pulse 3s linear infinite;
+    opacity: 1;
+    transition: opacity 1s;
+}
+#Jamaica1750-box{
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    background: black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    top: 45%;
+    left: 5%;
+    opacity: 0;
+    transition: opacity 1s;
+}
+#Martinique {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #3aba4d;
+    position: absolute;
+    top: 51.4%;
+    left: 31.5%;
+    animation: pulse 3s linear infinite;
+    opacity: 0;
+    transition: opacity 1s;
+    z-index: 3;
+}
+#Martinique-box{
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    background: black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    top: 42%;
+    left: 32%;
+    opacity: 0;
+    transition: opacity 1s;
+}
+#New-York1736 {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #3aba4d;
+    position: absolute;
+    top: 36%;
+    left: 29.5%;
+    animation: pulse 3s linear infinite;
+    opacity: 0;
+    transition: opacity 1s;
+}
+#New-York1736-box{
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    background: black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    top: 29%;
+    left: 31%;
+    opacity: 0;
+    transition: opacity 1s;
+}
+#New-York1803 {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #3aba4d;
+    position: absolute;
+    top: 36%;
+    left: 29.5%;
+    animation: pulse 3s linear infinite;
+    opacity: 0;
+    transition: opacity 1s;
+}
+#New-York1803-box{
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    background: black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    top: 29%;
+    left: 31%;
+    opacity: 0;
+    transition: opacity 1s;
+}
+#New-York1840 {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #3aba4d;
+    position: absolute;
+    top: 36%;
+    left: 29.5%;
+    animation: pulse 3s linear infinite;
+    opacity: 0;
+    transition: opacity 1s;
+}
+#New-York1840-box{
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    background: black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    top: 29%;
+    left: 31%;
+    opacity: 0;
+    transition: opacity 1s;
+}
+#Maryland1758 {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #3aba4d;
+    position: absolute;
+    top: 37%;
+    left: 28.5%;
+    animation: pulse 3s linear infinite;
+    opacity: 0;
+    transition: opacity 1s;
+}
+#Maryland1758-box{
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    background: black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    top: 29%;
+    left: 8%;
+    opacity: 0;
+    transition: opacity 1s;
+}
+#Suriname1773 {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #3aba4d;
+    position: absolute;
+    top: 54.5%;
+    left: 31.9%;
+    animation: pulse 3s linear infinite;
+    opacity: 0;
+    transition: opacity 1s;
+}
+#Suriname1773-box{
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    background: black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    top: 48%;
+    left: 33%;
+    opacity: 0;
+    transition: opacity 1s;
+}
+#Suriname1816 {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #3aba4d;
+    position: absolute;
+    top: 54.5%;
+    left: 31.9%;
+    animation: pulse 3s linear infinite;
+    opacity: 0;
+    transition: opacity 1s;
+}
+#Suriname1816-box{
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    background: black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    top: 48%;
+    left: 33%;
+    opacity: 0;
+    transition: opacity 1s;
+}
+#Suriname1850 {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #3aba4d;
+    position: absolute;
+    top: 54.5%;
+    left: 31.9%;
+    animation: pulse 3s linear infinite;
+    opacity: 0;
+    transition: opacity 1s;
+}
+#Suriname1850-box{
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    background: black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    top: 48%;
+    left: 33%;
+    opacity: 0;
+    transition: opacity 1s;
+}
+#South-Carolina {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #3aba4d;
+    position: absolute;
+    top: 41%;
+    left: 27.5%;
+    animation: pulse 3s linear infinite;
+    opacity: 0;
+    transition: opacity 1s;
+}
+#South-Carolina-box{
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    background: black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    top: 35%;
+    left: 29%;
+    opacity: 0;
+    transition: opacity 1s;
+}
+#Saint-Domingue {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #3aba4d;
+    position: absolute;
+    top: 49.3%;
+    left: 30%;
+    animation: pulse 3s linear infinite;
+    opacity: 0;
+    transition: opacity 1s;
+}
+#Saint-Domingue-box{
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    background: black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    top: 43%;
+    left: 33%;
+    opacity: 0;
+    transition: opacity 1s;
+}
+#Haiti {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #3aba4d;
+    position: absolute;
+    top: 49.3%;
+    left: 30%;
+    animation: pulse 3s linear infinite;
+    opacity: 0;
+    transition: opacity 1s;
+}
+#Haiti-box{
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    background: black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    top: 43%;
+    left: 33%;
+    opacity: 0;
+    transition: opacity 1s;
+}
+#England {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #3aba4d;
+    position: absolute;
+    top: 29.7%;
+    left: 46.6%;
+    animation: pulse 3s linear infinite;
+    opacity: 0;
+    transition: opacity 1s;
+}
+#England-box{
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    background: black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    top: 22%;
+    left: 48%;
+    opacity: 0;
+    transition: opacity 1s;
+}
+#Louisiana1819 {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #3aba4d;
+    position: absolute;
+    top: 43.3%;
+    left: 25.1%;
+    animation: pulse 3s linear infinite;
+    opacity: 0;
+    transition: opacity 1s;
+}
+#Louisiana1819-box{
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    background: black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    top: 37%;
+    left: 5%;
+    opacity: 0;
+    transition: opacity 1s;
+}
+#Louisiana1850 {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #3aba4d;
+    position: absolute;
+    top: 43.3%;
+    left: 25.1%;
+    animation: pulse 3s linear infinite;
+    opacity: 0;
+    transition: opacity 1s;
+}
+#Louisiana1850-box{
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    background: black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    top: 37%;
+    left: 5%;
+    opacity: 0;
+    transition: opacity 1s;
+}
+@keyframes pulse {
+    0%{
+        box-shadow: 0 0 0 0 rgba(92,242,95, .7), 0 0 0 0 rgba(92,242,95, .7);
+    }
+    40%{
+        box-shadow: 0 0 0 15px rgba(92,242,95, 0), 0 0 0 0 rgba(92,242,95, .7);
+    }   
+    80%{
+        box-shadow: 0 0 0 15px rgba(92,242,95, 0), 0 0 0 10px rgba(92,242,95, 0);
+    }   
+    100%{
+        box-shadow: 0 0 0 0 rgba(92,242,95, 0), 0 0 0 10px rgba(92,242,95, 0);
+    }   
+}
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes border-rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+.border-box::before{
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-image: conic-gradient(transparent, transparent, transparent, #2b81d0);
+    animation: border-rotate 4s linear infinite;
+
+    border-radius: 20px;
+}
+.border-box::after{
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-image: conic-gradient(transparent, transparent, transparent, #5cf25f);
+    animation: border-rotate 4s linear infinite ;
+    animation-delay: -2s;
+}    
+.border-box span{
+    position: absolute;
+    inset: 5px;
+    border-radius: 16px;
+    background: black;
+    z-index: 1;
+}
+.border-box h2{
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    transform: translateY(-20px);
+    font-size: 20px;
+}
+.border-box h3{
+    position: absolute;
+    z-index: 2;
+    color: #fff;
+    transform: translateY(10px);
+    font-size: 16px;
+}

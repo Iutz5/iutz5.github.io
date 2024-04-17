@@ -1,0 +1,149 @@
+body{
+    background-color: black;
+}
+h1{
+    top: 7.5px;
+    text-indent: 75px;
+    font-size: 48px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+p{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+h2{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+ul{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    position: absolute;
+    left: 25px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#background h1{
+    z-index: 4;
+    position: absolute;
+}
+.blur-overlay {
+    position: fixed;
+    width: 100%;
+    height: 10vh; /* Adjust height for the blurred area */
+    backdrop-filter: blur(1.5px); /* Adjust blur radius as needed */
+    z-index: 2;
+}
+
+.blur-top {
+    top: 0;
+}
+
+.blur-bottom {
+    height: 10%;
+    bottom: 0;
+    position: fixed;
+}
+.logo{
+    position: absolute;
+    width: 50px;
+    z-index: 6;
+    left: 1%;
+    top: 1%;
+    filter: invert(100%);
+}
+#bibliography-link {
+    position: fixed;
+    bottom: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    z-index: 9999; /* Ensure it's above other content */
+    font-size: 16px; /* Adjust as needed */
+  }
+  
+  #bibliography-link a {
+    text-decoration: none; /* Remove underline */
+    color: gray; /* Default color */
+  }
+  
+  #bibliography-link a:visited {
+    color: beige; /* Color for visited links */
+  }
+  
+  /* Optional styling for hover effect */
+  #bibliography-link a:hover {
+    text-decoration: underline;
+    color: white; /* Change color on hover if desired */
+  }
+  #Economy h2{
+    position: absolute;
+    font-size: 64px;
+    top: 100px;
+    left: 30px;
+  }
+  #Economy p{
+    position: absolute;
+    font-size: 36px;
+    top: 200px;
+    left: 40px;
+    width: 70%;
+  }
+  #white_creation h2{
+    position: absolute;
+    top: 500px;
+    right: 250px;
+  }
+  #white_creation p{
+    position: absolute;
+    top: 550px;
+    width: 500px;
+    right: 250px;
+  }
+  #w1{
+    position: absolute;
+    top: 650px;
+    width: 200px;
+    left: 1200px;
+  }
+  #w2{
+    position: absolute;
+    top: 650px;
+    width: 200px;
+    left: 1500px;
+  }
+  #machines h2{
+    position: absolute;
+    top: 1000px;
+    left: 30px;
+  }
+  #m1{
+    position: absolute;
+    top: 1040px;
+    left: 40px;
+  }
+  #m2{
+    position: absolute;
+    top: 1080px;
+    left: 40px;
+  }
+  #m3{
+    position: absolute;
+    top: 1120px;
+    left: 40px;
+  }
+  #m4{
+    position: absolute;
+    top: 1160px;
+    left: 40px;
+    padding-bottom: 100px;
+  }
+  #lathe{
+    position: absolute;
+    top: 400px;
+    left: 200px;
+    aspect-ratio: 640/474;
+    width: 800px;
+  }

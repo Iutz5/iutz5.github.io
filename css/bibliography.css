@@ -1,0 +1,51 @@
+body{
+    background-color: black;
+}
+h1{
+    top: 7.5px;
+    text-indent: 75px;
+    font-size: 48px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+ul{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+p{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+h2{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+#background h1{
+    z-index: 4;
+    position: absolute;
+}
+.blur-overlay {
+    position: fixed;
+    width: 100%;
+    height: 10vh; /* Adjust height for the blurred area */
+    backdrop-filter: blur(1.5px); /* Adjust blur radius as needed */
+    z-index: 2;
+}
+
+.blur-top {
+    top: 0;
+}
+
+.blur-bottom {
+    height: 10%;
+    bottom: 0;
+    position: fixed;
+}
+.logo{
+    position: absolute;
+    width: 50px;
+    z-index: 6;
+    left: 1%;
+    top: 1%;
+    filter: invert(100%);
+}
