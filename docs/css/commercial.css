@@ -94,39 +94,39 @@ ul{
   #white_creation h2{
     position: absolute;
     top: 500px;
-    right: 250px;
+    left: 950px;
   }
   #white_creation p{
     position: absolute;
-    top: 550px;
+    top: 575px;
     width: 500px;
-    right: 250px;
+    left: 950px;
   }
   #w1{
     position: absolute;
     top: 650px;
     width: 200px;
-    left: 1200px;
+    left: 1000px;
   }
   #w2{
     position: absolute;
     top: 650px;
     width: 200px;
-    left: 1500px;
+    left: 1250px;
   }
   #machines h2{
     position: absolute;
-    top: 1000px;
+    top: 1050px;
     left: 30px;
   }
   #m1{
     position: absolute;
-    top: 1040px;
+    top: 1100px;
     left: 40px;
   }
   #m2{
     position: absolute;
-    top: 1080px;
+    top: 1180px;
     left: 40px;
   }
   #m3{
@@ -142,8 +142,8 @@ ul{
   }
   #lathe{
     position: absolute;
-    top: 400px;
+    top: 450px;
     left: 200px;
     aspect-ratio: 640/474;
-    width: 800px;
+    width: 700px;
   }

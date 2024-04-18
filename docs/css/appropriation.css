@@ -89,7 +89,7 @@ ul{
     aspect-ratio: 533/800;
     position: absolute;
     top: 80px;
-    right: 300px;
+    left: 1050px;
 }
 #Changes h2{
     position: absolute;
@@ -133,21 +133,21 @@ ul{
     text-align: center;
     top: 500px;
     width: 40%;
-    right: 5%;
+    left: 875px;
 }
 #ss1{
     position: absolute;
     text-align: left;
     top: 600px;
     width: 40%;
-    right: 5%;
+    left: 900px;
 }
 #ss2{
     position: absolute;
     text-align: left;
     top: 700px;
     width: 40%;
-    right: 5%;
+    left: 900px;
 }
 #transition_to_minstrelsy{
     position: absolute;

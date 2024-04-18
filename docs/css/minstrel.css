@@ -106,7 +106,7 @@ h2{
     position: absolute;
     width: 600px;
     top: 225px;
-    right: 200px;
+    left: 900px;
     aspect-ratio: 992/558;
   }
   #instrument_misrep h2{
@@ -147,25 +147,25 @@ h2{
     font-size: 64px;
     position: absolute;
     top: 600px;
-    right: 300px;
+    left: 1025px;
   }
   #p1{
     position: absolute;
     top: 700px;
     width: 200px;
-    right: 500px;
+    left:  1000px;
   }
   #p2{
     position: absolute;
     top: 700px;
     width: 200px;
-    right: 250px;
+    left: 1250px;
   }
   #p3{
     position: absolute;
     top: 875px;
-    width: 50%;
-    right: 30px;
+    width: 35%;
+    left: 950px;
   }
   span{
     position: absolute;

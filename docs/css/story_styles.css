@@ -135,12 +135,12 @@ input[type=range] {
 
 #banjo_slider{
     position: absolute;
-    top: 41%;
-    left: 30%;
+    top: 43.5%;
+    left: 25%;
     filter: invert(50%);
-    aspect-ratio: 1249 / 1723;
-    height: 100%;
-    transform: rotate(120deg);
+    aspect-ratio: 981 / 980;
+    height: 90%;
+    transform: rotate(45deg);
     z-index: 2;
     overflow-y: hidden;
 }
@@ -189,7 +189,7 @@ input[type=range] {
 }
 #Instructions{
     top: 75%;
-    left: 5%;
+    left: 3%;
     font-family: 'Courier New', Courier, monospace;
     font-size: 12px;
     color: white;
